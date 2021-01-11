@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{img/favicon.ico}">
+    <title>Preclinic - Medical & Hospital - Bootstrap 4 Admin Template</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{css/font-awesome.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+    <!--[if lt IE 9]>
+		<script th:src="@{js/html5shiv.min.js}"></script>
+		<script th:src="@{js/respond.min.js}"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="main-wrapper account-wrapper">
+        <div class="account-page">
+			<div class="account-center">
+				<div class="account-box">
+                    <form action="index.html" class="form-signin">
+						<div class="account-logo">
+                            <a href="index.html"><img th:src="@{img/logo-dark.png}" alt=""></a>
+                        </div>
+                        <div class="form-group">
+                            <label>[[#{login.username}]]</label>
+                            <input type="text" autofocus="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>[[#{login.password}]]</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="form-group text-right">
+                            <a href="forgot-password.html">[[#{login.forget.password}]]</a>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary account-btn">
+                                [[#{login.login}]]
+                            </button>
+                        </div>
+                        <div class="text-center register-link">
+                            [[#{login.dont.account}]] <a href="register.html">[[#{login.now.register}]]</a>
+                        </div>
+                    </form>
+                </div>
+			</div>
+        </div>
+    </div>
+    <script th:src="@{js/jquery-3.2.1.min.js}"></script>
+	<script th:src="@{js/popper.min.js}"></script>
+    <script th:src="@{js/bootstrap.min.js}"></script>
+    <script th:src="@{js/app.js}"></script>
+</body>
+
+</html>
