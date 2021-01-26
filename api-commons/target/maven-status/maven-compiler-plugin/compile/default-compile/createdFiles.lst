@@ -1,7 +1,0 @@
-com\aloogn\api\utils\ThreadLocalUtil.class
-com\aloogn\api\utils\StringUtils.class
-com\aloogn\api\utils\IdGeneratorSnowflake.class
-com\aloogn\api\service\impl\LogServiceImpl.class
-com\aloogn\api\utils\ClassRefUtil.class
-com\aloogn\api\utils\DateUtil.class
-com\aloogn\api\utils\UuidUtil.class

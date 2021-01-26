@@ -4,12 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.atguigu.education</groupId>
+    <groupId>com.aloogn.project</groupId>
     <artifactId>parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>api-commons</module>
-        <module>education-web8080</module>
+        <module>jar-public</module>
+        <module>cloud-api-gateway</module>
+        <module>cloud-consumer-app-api</module>
+        <module>cloud-consumer-web</module>
+        <module>cloud-eureka-server</module>
+        <module>cloud-provider-project</module>
+
+
     </modules>
     <packaging>pom</packaging>
 
@@ -21,12 +27,13 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
-        <log4j.version>1.2.17</log4j.version>
+        <log4j.version>1.7.28</log4j.version>
         <lombok.version>1.16.18</lombok.version>
         <spring.cloud.alibaba.version>2.1.0.RELEASE</spring.cloud.alibaba.version>
         <mysql.version>5.1.47</mysql.version>
         <druid.version>1.1.16</druid.version>
         <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
+        <mybatis.generator.version>1.3.7</mybatis.generator.version>
         <swagger.version>2.9.2</swagger.version>
         <fastjson.version>1.2.5</fastjson.version>
         <hutool.version>5.1.0</hutool.version>
@@ -52,13 +59,13 @@
                 <scope>import</scope>
             </dependency>
 
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.1.0.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
+<!--                <version>2.1.0.RELEASE</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>mysql</groupId>
@@ -66,11 +73,11 @@
                 <version>${mysql.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba</groupId>-->
+<!--                <artifactId>druid</artifactId>-->
+<!--                <version>${druid.version}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -85,8 +92,8 @@
             </dependency>
 
             <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
                 <version>${log4j.version}</version>
             </dependency>
 
@@ -127,6 +134,7 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -135,6 +143,7 @@
                     <addResources>true</addResources>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>

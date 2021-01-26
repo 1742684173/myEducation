@@ -7,14 +7,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-commons" />
-        <module name="education-web8080" />
+        <module name="cloud-consumer-web" />
+        <module name="cloud-api-gateway" />
+        <module name="cloud-eureka-server" />
+        <module name="cloud-provider-project" />
+        <module name="cloud-consumer-app-api" />
+        <module name="jar-public" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloud-provider-base" target="1.8" />
+      <module name="cloud-web8080" target="1.8" />
       <module name="education-api-commons" target="1.8" />
       <module name="education-weapp" target="1.8" />
       <module name="education-web-door8080" target="1.8" />
+      <module name="jar-common" target="1.8" />
+      <module name="jar-commons" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

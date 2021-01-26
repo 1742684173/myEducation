@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/api-commons/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/api-commons/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/education-weapp8081/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/education-weapp8081/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/education-web8080/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/education-web8080/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-api-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumer-app-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumer-app-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumer-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumer-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-eureka-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-project/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-provider-project/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jar-public/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jar-public/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aloogn.project.dao.UserRecordDao">
+
+    <resultMap type="com.aloogn.project.entity.UserRecord" id="UserRecordMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="nikename" column="nikename" jdbcType="VARCHAR"/>
+        <result property="sex" column="sex" jdbcType="OTHER"/>
+        <result property="birth" column="birth" jdbcType="VARCHAR"/>
+        <result property="tel" column="tel" jdbcType="VARCHAR"/>
+        <result property="qq" column="qq" jdbcType="VARCHAR"/>
+        <result property="wechat" column="wechat" jdbcType="VARCHAR"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="degree" column="degree" jdbcType="OTHER"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="OTHER"/>
+        <result property="idCard" column="id_card" jdbcType="VARCHAR"/>
+        <result property="loginId" column="login_id" jdbcType="VARCHAR"/>
+        <result property="roleId" column="role_id" jdbcType="VARCHAR"/>
+        <result property="addressId" column="address_id" jdbcType="VARCHAR"/>
+        <result property="nationId" column="nation_id" jdbcType="VARCHAR"/>
+        <result property="countryId" column="country_id" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+        <result property="updateUser" column="update_user" jdbcType="VARCHAR"/>
+        <result property="rid" column="rid" jdbcType="VARCHAR"/>
+        <result property="platform" column="platform" jdbcType="OTHER"/>
+        <result property="operate" column="operate" jdbcType="OTHER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="UserRecordMap">
+        select
+          id, name, nikename, sex, birth, tel, qq, wechat, email, degree, password, status, id_card, login_id, role_id, address_id, nation_id, country_id, create_time, update_time, create_user, update_user, rid, platform, operate
+        from project_base.user_record
+        where rid = #{rid}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="UserRecordMap">
+        select
+          id, name, nikename, sex, birth, tel, qq, wechat, email, degree, password, status, id_card, login_id, role_id, address_id, nation_id, country_id, create_time, update_time, create_user, update_user, rid, platform, operate
+        from project_base.user_record
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="UserRecordMap">
+        select
+          id, name, nikename, sex, birth, tel, qq, wechat, email, degree, password, status, id_card, login_id, role_id, address_id, nation_id, country_id, create_time, update_time, create_user, update_user, rid, platform, operate
+        from project_base.user_record
+        <where>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="nikename != null and nikename != ''">
+                and nikename = #{nikename}
+            </if>
+            <if test="sex != null">
+                and sex = #{sex}
+            </if>
+            <if test="birth != null and birth != ''">
+                and birth = #{birth}
+            </if>
+            <if test="tel != null and tel != ''">
+                and tel = #{tel}
+            </if>
+            <if test="qq != null and qq != ''">
+                and qq = #{qq}
+            </if>
+            <if test="wechat != null and wechat != ''">
+                and wechat = #{wechat}
+            </if>
+            <if test="email != null and email != ''">
+                and email = #{email}
+            </if>
+            <if test="degree != null">
+                and degree = #{degree}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="idCard != null and idCard != ''">
+                and id_card = #{idCard}
+            </if>
+            <if test="loginId != null and loginId != ''">
+                and login_id = #{loginId}
+            </if>
+            <if test="roleId != null and roleId != ''">
+                and role_id = #{roleId}
+            </if>
+            <if test="addressId != null and addressId != ''">
+                and address_id = #{addressId}
+            </if>
+            <if test="nationId != null and nationId != ''">
+                and nation_id = #{nationId}
+            </if>
+            <if test="countryId != null and countryId != ''">
+                and country_id = #{countryId}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="updateTime != null">
+                and update_time = #{updateTime}
+            </if>
+            <if test="createUser != null and createUser != ''">
+                and create_user = #{createUser}
+            </if>
+            <if test="updateUser != null and updateUser != ''">
+                and update_user = #{updateUser}
+            </if>
+            <if test="rid != null and rid != ''">
+                and rid = #{rid}
+            </if>
+            <if test="platform != null">
+                and platform = #{platform}
+            </if>
+            <if test="operate != null">
+                and operate = #{operate}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="rid" useGeneratedKeys="true">
+        insert into project_base.user_record(id, name, nikename, sex, birth, tel, qq, wechat, email, degree, password, status, id_card, login_id, role_id, address_id, nation_id, country_id, create_time, update_time, create_user, update_user, platform, operate)
+        values (#{id}, #{name}, #{nikename}, #{sex}, #{birth}, #{tel}, #{qq}, #{wechat}, #{email}, #{degree}, #{password}, #{status}, #{idCard}, #{loginId}, #{roleId}, #{addressId}, #{nationId}, #{countryId}, #{createTime}, #{updateTime}, #{createUser}, #{updateUser}, #{platform}, #{operate})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update project_base.user_record
+        <set>
+            <if test="id != null and id != ''">
+                id = #{id},
+            </if>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="nikename != null and nikename != ''">
+                nikename = #{nikename},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="birth != null and birth != ''">
+                birth = #{birth},
+            </if>
+            <if test="tel != null and tel != ''">
+                tel = #{tel},
+            </if>
+            <if test="qq != null and qq != ''">
+                qq = #{qq},
+            </if>
+            <if test="wechat != null and wechat != ''">
+                wechat = #{wechat},
+            </if>
+            <if test="email != null and email != ''">
+                email = #{email},
+            </if>
+            <if test="degree != null">
+                degree = #{degree},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="idCard != null and idCard != ''">
+                id_card = #{idCard},
+            </if>
+            <if test="loginId != null and loginId != ''">
+                login_id = #{loginId},
+            </if>
+            <if test="roleId != null and roleId != ''">
+                role_id = #{roleId},
+            </if>
+            <if test="addressId != null and addressId != ''">
+                address_id = #{addressId},
+            </if>
+            <if test="nationId != null and nationId != ''">
+                nation_id = #{nationId},
+            </if>
+            <if test="countryId != null and countryId != ''">
+                country_id = #{countryId},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="createUser != null and createUser != ''">
+                create_user = #{createUser},
+            </if>
+            <if test="updateUser != null and updateUser != ''">
+                update_user = #{updateUser},
+            </if>
+            <if test="platform != null">
+                platform = #{platform},
+            </if>
+            <if test="operate != null">
+                operate = #{operate},
+            </if>
+        </set>
+        where rid = #{rid}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from project_base.user_record where rid = #{rid}
+    </delete>
+
+</mapper>
